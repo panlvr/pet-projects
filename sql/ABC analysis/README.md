@@ -141,7 +141,7 @@ SUM(amount) OVER(ORDER BY amount DESC) / SUM(amount) OVER()
 ```
 Determines the cumulative percentage contribution.
 
- ##🎯 Use Cases
+## 🎯 Use Cases
 This analysis helps with:
 
 * Inventory Management
@@ -205,7 +205,7 @@ INSERT INTO sales VALUES
 |Window function errors|Check database version (MySQL 8+, PostgreSQL 8.4+)|
 |Division by zero|Ensure total sum > 0|
 |Performance issues|Add indexes, consider batch processing|
-|NULL values	Handle with COALESCE() if needed|
+|NULL values|Handle with COALESCE() if needed|
 
 ## 📄 License
 This query is provided for educational and business intelligence purposes.
