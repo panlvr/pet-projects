@@ -104,7 +104,7 @@ Alice
 
 * Reset vote counts
 
-( Continue until winner found or tie declared
+* Continue until winner found or tie declared
 
 ### 🔧 Technical Specifications
 Parameter	Limit
