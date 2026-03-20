@@ -67,46 +67,46 @@ Rank 3: Bob
 Alice
 ```
 
-###🎮 Program Flow
-Input Validation
+### 🎮 Program Flow
+1. Input Validation
 
-Checks for at least one candidate
+* Checks for at least one candidate
 
-Ensures candidate count doesn't exceed maximum (9)
+* Ensures candidate count doesn't exceed maximum (9)
 
-Validates voter count (max 100)
+* Validates voter count (max 100)
 
-Voting
+2. Voting
 
-Each voter ranks all candidates
+* Each voter ranks all candidates
 
-Invalid votes (non-existent candidates) cause immediate exit
+* Invalid votes (non-existent candidates) cause immediate exit
 
-Tabulation
+3. Tabulation
 
-Counts votes for non-eliminated candidates
+* Counts votes for non-eliminated candidates
 
-Each vote counts for the highest-ranked non-eliminated candidate
+* Each vote counts for the highest-ranked non-eliminated candidate
 
-Winner Check
+4. Winner Check
 
-If any candidate has >50% of votes, they win
+* If any candidate has >50% of votes, they win
 
-Elimination
+5. Elimination
 
-Find minimum vote count among remaining candidates
+* Find minimum vote count among remaining candidates
 
-If tie between all remaining, all win
+* If tie between all remaining, all win
 
-Otherwise, eliminate candidates with minimum votes
+* Otherwise, eliminate candidates with minimum votes
 
-Repeat
+6. Repeat
 
-Reset vote counts
+* Reset vote counts
 
-Continue until winner found or tie declared
+( Continue until winner found or tie declared
 
-###🔧 Technical Specifications
+### 🔧 Technical Specifications
 Parameter	Limit
 Maximum Voters	100
 Maximum Candidates	9
@@ -114,15 +114,17 @@ Vote Counting Method	Instant-runoff
 Winner Threshold	>50% of votes
 
 ### 📁 Project Structure
+```text
 pet-projects/c/runoff/
 ├── runoff.c           # Main program source code
 ├── Makefile           # Build automation
 └── README.md          # This file
+```
 
 ### 🛠️ Makefile
 Create a Makefile for easier compilation:
 
-makefile
+```makefile
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LIBS = -lcs50
@@ -146,13 +148,14 @@ debug: CFLAGS += -g
 debug: clean all
 
 .PHONY: all run clean rebuild debug
+```
 Then compile with:
 
-bash
+```bash
 make          # Build the program
 make run      # Build and run
 make clean    # Remove binary
-
+```
 ### 🧩 Function Descriptions
 Function	Purpose
 vote()	Records voter preferences if the candidate exists
@@ -163,8 +166,8 @@ is_tie()	Determines if all remaining candidates are tied
 eliminate()	Eliminates candidates with the minimum votes
 
 ### 📊 Sample Outputs
-Regular Win
-text
+#### Regular Win
+```text
 $ ./runoff Alice Bob Charlie
 Number of voters: 5
 [Voting input...]
@@ -180,61 +183,62 @@ Rank 2: Alice
 
 Alice
 Bob
-Invalid Input Handling
-text
+```
+#### Invalid Input Handling
+```text
 $ ./runoff
 Usage: runoff [candidate ...]
 
 $ ./runoff Alice Bob Charlie Dave Eve Frank George Henry Irene John
 Maximum number of candidates is 9
-
+```
 ### ⚠️ Error Handling
 The program handles the following errors:
 
-No candidates provided
+* No candidates provided
 
-Too many candidates (>9)
+* Too many candidates (>9)
 
-Too many voters (>100)
+* Too many voters (>100)
 
-Invalid candidate names during voting
+* Invalid candidate names during voting
 
-Empty input
+* Empty input
 
 ### 🎓 Learning Objectives
 This project demonstrates:
 
-Ranked-choice voting algorithms
+* Ranked-choice voting algorithms
 
-Struct usage in C
+* Struct usage in C
 
-2D arrays for storing preferences
+* 2D arrays for storing preferences
 
-Modular function design
+* Modular function design
 
-Boolean logic and control flow
+* Boolean logic and control flow
 
-String manipulation and comparison
+* String manipulation and comparison
 
 ### 📝 Notes
-All candidates must be ranked by each voter
+* All candidates must be ranked by each voter
 
-Voter count must be provided as an integer
+* Voter count must be provided as an integer
 
-Candidate names are case-sensitive
+* Candidate names are case-sensitive
 
-The program exits immediately on invalid votes
+* The program exits immediately on invalid votes
 
-In case of a complete tie, all remaining candidates are declared winners
+* In case of a complete tie, all remaining candidates are declared winners
 
 ### 🔍 Debugging Tips
 If votes aren't counting correctly:
 
-Check that candidates are being properly eliminated
+* Check that candidates are being properly eliminated
 
-Verify that tabulate() is finding each voter's next preference
+* Verify that tabulate() is finding each voter's next preference
 
-Ensure vote counts are reset after each elimination round
+* Ensure vote counts are reset after each elimination round
 
 ### 📄 License
 This project is based on CS50's problem set and is created for educational purposes.
