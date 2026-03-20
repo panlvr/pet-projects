@@ -43,22 +43,18 @@ pet-projects/c/pong/
 
 #### Using Make (Recommended)
 ```bash
-cd projects/pong
+cd pet-projects/c/pong
 make          # Compile the game
 make run      # Compile and run
-Available Make Commands
-Command	Description
-make or make all	Compile the game
-make run	Compile (if needed) and run the game
-make clean	Remove the compiled executable
-make rebuild	Clean and rebuild from scratch
-make debug	Build with debug symbols for debugging
-make help	Show all available commands
+make clean	# Remove the compiled executable
+make rebuild	# Clean and rebuild from scratch
+make debug	# Build with debug symbols for debugging
+make help	# Show all available commands
 ```
 #### Manual Compilation (Without Make)
 ```bash
 cd projects/pong
-gcc -Wall -Wextra -std=c99 -o pong src/pong.c
+gcc -Wall -Wextra -std=c11 -o pong src/pong.c
 ./pong
 ```
 ### 🎨 Game Specifications
