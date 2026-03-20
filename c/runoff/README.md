@@ -160,7 +160,7 @@ make clean    # Remove binary
 |Function|Purpose|
 |----|----|
 |vote()|Records voter preferences if the candidate exists|
-|tabulate()Counts votes for non-eliminated candidates|
+|tabulate()|Counts votes for non-eliminated candidates|
 |print_winner()|Checks if any candidate has >50% of votes|
 |find_min()|Finds the lowest vote count among remaining candidates|
 |is_tie()|Determines if all remaining candidates are tied|
