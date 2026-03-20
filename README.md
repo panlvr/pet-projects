@@ -33,9 +33,9 @@ This program implements a simplified version of the classic Pong game using only
 
 ### Project Structure
 projects/pong/
-├── pong.c # Main game source code
-├── Makefile # Build automation
-└── README.md # This file
+- pong.c # Main game source code
+- Makefile # Build automation
+- README.md # This file
 
 ### Compilation and Execution
 
@@ -51,13 +51,14 @@ make run	Compile (if needed) and run the game
 make clean	Remove the compiled executable
 make rebuild	Clean and rebuild from scratch
 make debug	Build with debug symbols for debugging
-make help	Show all available commands
-Manual Compilation (Without Make)
+make help	Show all available 
+```
+### Manual Compilation (Without Make)
 bash
 cd projects/pong
 gcc -Wall -Wextra -std=c99 -o pong src/pong.c
 ./pong
-```
+
 🎨 Game Specifications
 Playing Field: 80 characters wide × 25 characters tall
 
