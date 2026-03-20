@@ -56,7 +56,7 @@ make help	Show all available
 ### Manual Compilation (Without Make)
 bash
 cd projects/pong
-gcc -Wall -Wextra -std=c99 -o pong src/pong.c
+gcc -Wall -Wextra -std=c11 -o pong src/pong.c
 ./pong
 
 🎨 Game Specifications
