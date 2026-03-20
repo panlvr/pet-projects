@@ -33,21 +33,21 @@ On Windows with WSL:
 Follow the same Linux instructions, or use the CS50 IDE/Sandbox.
 ```
 ## Compilation
-bash
-Compile with CS50 library
+```bash
+# Compile with CS50 library
 gcc -o runoff runoff.c -lcs50
 
-Or with additional warnings
+# Or with additional warnings
 gcc -Wall -Wextra -o runoff runoff.c -lcs50
-
+```
 ## Running the Program
-bash
-Basic usage with candidate names
+```bash
+# Basic usage with candidate names
 ./runoff Alice Bob Charlie
 
-With more candidates (up to 9)
+# With more candidates (up to 9)
 ./runoff Candidate1 Candidate2 Candidate3 Candidate4
-
+```
 ### 📋 Usage Example
 text
 $ ./runoff Alice Bob Charlie
