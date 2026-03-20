@@ -49,10 +49,9 @@ gcc -Wall -Wextra -o runoff runoff.c -lcs50
 ./runoff Candidate1 Candidate2 Candidate3 Candidate4
 ```
 ### 📋 Usage Example
-
+```text
 $ ./runoff Alice Bob Charlie
 Number of voters: 3
-
 Rank 1: Alice
 Rank 2: Bob
 Rank 3: Charlie
@@ -66,6 +65,7 @@ Rank 2: Alice
 Rank 3: Bob
 
 Alice
+```
 
 ###🎮 Program Flow
 Input Validation
