@@ -21,25 +21,25 @@ The program follows these steps:
 
 ```bash
 # Basic compilation
-gcc -o prime_factor prime_factor.c
+gcc -o divisor divisor.c
 
 # With warnings
-gcc -Wall -Wextra -o prime_factor prime_factor.c
+gcc -Wall -Wextra -o divisor divisor.c
 
 # With optimization
-gcc -O2 -o prime_factor prime_factor.c
+gcc -O2 -o divisor divisor.c
 ```
 ### Running the Program
 ```bash
 # Basic usage
-./prime_factor
+./divisor
 
 # Enter a number when prompted
 ```
 ## 📋 Usage Examples
 ### Example 1: Positive Number
 ```bash
-$ ./prime_factor
+$ ./divisor
 12
 3
 ```
@@ -47,7 +47,7 @@ Explanation: Prime factors of 12 are 2 and 3. Largest is 3.
 
 ### Example 2: Prime Number
 ```bash
-$ ./prime_factor
+$ ./divisor
 17
 17
 ```
@@ -55,7 +55,7 @@ Explanation: 17 is prime, so its largest prime factor is itself.
 
 ### Example 3: Negative Number
 ```bash
-$ ./prime_factor
+$ ./divisor
 -28
 7
 ```
@@ -63,7 +63,7 @@ Explanation: Program converts -28 to 28, factors are 2, 2, 7. Largest is 7.
 
 ### Example 4: Power of 2
 ```bash
-$ ./prime_factor
+$ ./divisor
 16
 2
 ```
@@ -71,7 +71,7 @@ Explanation: 16 = 2⁴, largest prime factor is 2.
 
 ### Example 5: Large Prime Factor
 ```bash
-$ ./prime_factor
+$ ./divisor
 13195
 29
 ```
@@ -97,19 +97,19 @@ The program validates input with these rules:
 
 ### Invalid Input Examples:
 ```bash
-$ ./prime_factor
+$ ./divisor
 abc
 n/a
 
-$ ./prime_factor
+$ ./divisor
 12abc
 n/a
 
-$ ./prime_factor
+$ ./divisor
 0
 n/a
 
-$ ./prime_factor
+$ ./divisor
 1
 n/a
 ```
@@ -167,8 +167,8 @@ int division(int n, int div) {
 
 ## 📁 Project Structure
 ```text
-prime_factor/
-├── prime_factor.c    # Main program source code
+pet-projects/c/divisor
+├── divisor.c    # Main program source code
 ├── Makefile          # Build automation
 └── README.md         # This file
 ```
@@ -178,8 +178,8 @@ Create a Makefile for easier compilation:
 ```makefile
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -O2
-TARGET = prime_factor
-SRC = prime_factor.c
+TARGET = divisor
+SRC = divisor.c
 
 all: $(TARGET)
 
