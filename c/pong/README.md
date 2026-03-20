@@ -32,10 +32,12 @@ This program implements a simplified version of the classic Pong game using only
 - Make (optional, for using the Makefile)
 
 ### Project Structure
-projects/pong/
-- pong.c # Main game source code
-- Makefile # Build automation
-- README.md # This file
+```text
+pet-projects/c/pong/
+├── pong.c # Main game source code
+├── Makefile # Build automation
+└── README.md # This file
+```
 
 ### Compilation and Execution
 
@@ -54,86 +56,72 @@ make debug	Build with debug symbols for debugging
 make help	Show all available commands
 ```
 #### Manual Compilation (Without Make)
-bash
+```bash
 cd projects/pong
 gcc -Wall -Wextra -std=c99 -o pong src/pong.c
 ./pong
-
+```
 ### 🎨 Game Specifications
-Playing Field: 80 characters wide × 25 characters tall
+* Playing Field: 80 characters wide × 25 characters tall
 
-Paddle Size: 3 characters
+* Paddle Size: 3 characters
 
-Ball Size: 1 character
+* Ball Size: 1 character
 
-Winning Score: 21 points
+* Winning Score: 21 points
 
 ### 🕹️ How to Play
-Navigate to the project directory:
+1. Run the program to start the game
 
-bash
-cd projects/pong
-Compile and run the game:
+2. Player 1 (left side) uses A (up) and Z (down) to move their paddle
 
-bash
-make run
-Player 1 (left side) uses:
+3. Player 2 (right side) uses K (up) and M (down) to move their paddle
 
-A / a - Move paddle up
+4. Press Space Bar to advance each turn
 
-Z / z - Move paddle down
+5. The ball will move after each turn - try to hit it with your paddle
 
-Player 2 (right side) uses:
+6. Score points when the ball passes your opponent's paddle
 
-K / k - Move paddle up
-
-M / m - Move paddle down
-
-Press Space Bar to advance each turn
-
-The ball moves after each turn - try to hit it with your paddle
-
-Score points when the ball passes your opponent's paddle
-
-First player to reach 21 points wins!
+7. First player to reach 21 points wins!
 
 ### 🔧 Game Mechanics
-Wall Collision: Ball bounces off the top and bottom walls
+* Wall Collision: Ball bounces off the top and bottom walls
 
-Paddle Collision: Ball reverses direction when hitting a paddle
+* Paddle Collision: Ball reverses direction when hitting a paddle
 
-Scoring: A point is scored when the ball reaches the left or right edge of the field
+* Scoring: A point is scored when the ball reaches the left or right edge of the field
 
-Reset: After each goal, the ball and paddles return to their starting positions
+* Reset: After each goal, the ball and paddles return to their starting positions
 
 ### 🛠️ Technical Details
-Written entirely in C
+* Written entirely in C
 
-Uses only standard library functions
+* Uses only standard library functions
 
-Terminal-based ASCII graphics
+* Terminal-based ASCII graphics
 
-No external graphics libraries required
+* No external graphics libraries required
 
-Modular function-based design
+* Modular function-based design
 
 ### 🐛 Debugging
 If you encounter issues:
 
-Terminal size: Ensure your terminal window is at least 80x25 characters
+- Terminal size: Ensure your terminal window is at least 80x25 characters
 
-Input not working: Make sure you're pressing lowercase letters (a, z, k, m) or space
+- Input not working: Make sure you're pressing lowercase letters (a, z, k, m) or space
 
-Compilation errors: Try make clean then make to rebuild
+- Compilation errors: Try make clean then make to rebuild
 
-Debug build: Use make debug for detailed error messages
+- Debug build: Use make debug for detailed error messages
 
 ### 📝 Notes
-The game is turn-based - action only progresses when you press Space
+* The game is turn-based - action only progresses when you press Space
 
-All inputs are case-insensitive (both uppercase and lowercase work)
+* All inputs are case-insensitive (both uppercase and lowercase work)
 
-The screen clears before each turn for a cleaner display
+* The screen clears before each turn for a cleaner display
 
 ### 🏆 Win Condition
 The game ends when either player reaches 21 points. The winner is announced, and the program terminates.
