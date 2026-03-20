@@ -37,8 +37,6 @@ projects/pong/
 ├── Makefile # Build automation
 └── README.md # This file
 
-text
-
 ### Compilation and Execution
 
 #### Using Make (Recommended)
@@ -59,6 +57,7 @@ bash
 cd projects/pong
 gcc -Wall -Wextra -std=c99 -o pong src/pong.c
 ./pong
+```
 🎨 Game Specifications
 Playing Field: 80 characters wide × 25 characters tall
 
