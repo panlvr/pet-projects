@@ -146,7 +146,7 @@ ciphertext[i] = toupper(key[index]);
 
 ### 📁 Project Structure
 ```text
-substitution/
+pet-projects/c/substitution/
 ├── substitution.c    # Main program source code
 ├── Makefile          # Build automation
 └── README.md         # This file
@@ -157,7 +157,7 @@ substitution/
 
 ```makefile
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c11
 LIBS = -lcs50
 TARGET = substitution
 SRC = substitution.c

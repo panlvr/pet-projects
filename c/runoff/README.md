@@ -117,7 +117,6 @@ Winner Threshold	>50% of votes
 ```text
 pet-projects/c/runoff/
 ├── runoff.c           # Main program source code
-├── Makefile           # Build automation
 └── README.md          # This file
 ```
 
@@ -126,7 +125,7 @@ Create a Makefile for easier compilation:
 
 ```makefile
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c11
 LIBS = -lcs50
 TARGET = runoff
 SRC = runoff.c

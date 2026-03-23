@@ -167,7 +167,7 @@ int division(int n, int div) {
 
 ## 📁 Project Structure
 ```text
-pet-projects/c/divisor
+pet-projects/c/divisor/
 ├── divisor.c    # Main program source code
 ├── Makefile          # Build automation
 └── README.md         # This file
