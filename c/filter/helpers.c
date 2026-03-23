@@ -78,41 +78,33 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Detect edges
-void edges(int height, int width, RGBTRIPLE image[height][width])
+void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
+    int sepiaRed = 0;
+    int sepiaGreen = 0;
+    int sepiaBlue = 0;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
-        }
-    }
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            int sumRed = 0;
-            int sumGreen = 0;
-            int sumBlue = 0;
-            float cnt = 0.0;
-            for (int rows = -1; rows <= 1; rows++)
+            sepiaRed = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue);
+            sepiaGreen = round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue);
+            sepiaBlue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue);
+            if (sepiaRed > 255)
             {
-                for (int col = -1; col <= 1; col++)
-                {
-                    if (i + rows >= 0 && i + rows < height && j + col >= 0 && j + col < width)
-                    {
-                        sumRed += copy[i + rows][j + col].rgbtRed;
-                        sumGreen += copy[i + rows][j + col].rgbtGreen;
-                        sumBlue += copy[i + rows][j + col].rgbtBlue;
-                        cnt++;
-                    }
-                }
+                sepiaRed = 255;
             }
-            image[i][j].rgbtRed = round(sumRed / cnt);
-            image[i][j].rgbtGreen = round(sumGreen / cnt);
-            image[i][j].rgbtBlue = round(sumBlue / cnt);
+            if (sepiaGreen > 255)
+            {
+                sepiaGreen = 255;
+            }
+            if (sepiaBlue > 255)
+            {
+                sepiaBlue = 255;
+            }
+            image[i][j].rgbtRed = sepiaRed;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtBlue = sepiaBlue;
         }
     }
     return;
