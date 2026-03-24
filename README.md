@@ -8,6 +8,21 @@ The goal of these projects is to build practical experience in programming, algo
 
 The repository is organized into two main areas:
 
+```text
+pet-projects
+│
+├── C
+│   ├── divisor
+│   ├── pong
+│   ├── cipher
+│   └── runoff
+│
+└── SQL
+    ├── abc_analysis
+    ├── n_day_retention
+    └── rolling_retention
+```
+
 ### 💻C Programming
 
 Projects focused on core computer science concepts such as algorithms, program logic, and low-level programming.
