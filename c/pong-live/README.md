@@ -51,7 +51,7 @@ make help	# Show all available commands
 #### Manual Compilation (Without Make)
 ```bash
 cd pet-projects/c/pong-live
-gcc -Wall -Wextra -std=c11 -o pong-live pong-live.c
+gcc -Wall -Wextra -std=c11 -o pong-live pong-live.c -lncurses
 ./pong-live
 ```
 ## 🎨 Game Specifications
