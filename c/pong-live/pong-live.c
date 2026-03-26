@@ -33,7 +33,8 @@ int main() {
     int leftPadY = 12;     // Initial left paddle Y position
     int player1Score = 0;  // Player 1 score (left)
     int player2Score = 0;  // Player 2 score (right)
-    int gameActive = 1;    // Game active flag: 1 - game running, 0 - game over
+    int gameActive = 1;   // Game active flag: 1 - game running, 0 - game over
+    int ballTimer = 0;
 
     while (gameActive) {
         // Step 1: Draw current field state
@@ -50,12 +51,20 @@ int main() {
         }
         
         // Step 4: Move ball
-        ballX = moveBallX(ballX, dBallX);  // New X position
-        ballY = moveBallY(ballY, dBallY);  // New Y position
-        // Step 5: Check collisions and change direction
-        dBallY = bounceWalls(ballY, dBallY);      // Check wall collision
-        dBallX = bouncePad(ballX, ballY, dBallX, leftPadY, leftPadX);   // Check left paddle collision
-        dBallX = bouncePad(ballX, ballY, dBallX, rightPadY, rightPadX); // Check right paddle collision
+        ballTimer += 10;
+
+        if (ballTimer >= 130) {
+            ballX = moveBallX(ballX, dBallX);
+            ballY = moveBallY(ballY, dBallY);
+
+            dBallY = bounceWalls(ballY, dBallY);
+            dBallX = bouncePad(ballX, ballY, dBallX, leftPadY, leftPadX);
+            dBallX = bouncePad(ballX, ballY, dBallX, rightPadY, rightPadX);
+
+            ballTimer = 0;
+        }
+
+        napms(10);
         // Step 6: Check for goal
         int scored = score(ballX);  // scored = 0 (no goal), 1 (goal for right player), 2 (goal for left player)
         
@@ -83,19 +92,17 @@ int main() {
         
         if (win == 1) {  // Left player wins
             // Final field rendering
-            drawField(ballX, ballY, rightPadX, rightPadY, leftPadX, leftPadY, 
-                      player1Score, player2Score);
-            printf("Player 1 wins!\n");  // Display victory message
-            gameActive = 0;  // End game loop
+            mvprintw(12, 33, "PLAYER 1 WINS!");
+            refresh();
+            napms(5000);
+            gameActive = 0;
         } else if (win == 2) {  // Right player wins
-            drawField(ballX, ballY, rightPadX, rightPadY, leftPadX, leftPadY, 
-                      player1Score, player2Score);
-            printf("Player 2 wins!\n");
+            mvprintw(12, 33, "PLAYER 2 WINS!");
+            refresh();
+            napms(5000);
             gameActive = 0;
         }
-        napms(200); 
     }
-
     endwin();
     return 0;
 }
