@@ -66,17 +66,13 @@ gcc -Wall -Wextra -std=c11 -o pong-live pong-live.c -lncurses
 ## 🕹️ How to Play
 1. Run the program to start the game
 
-2. Player 1 (left side) uses A (up) and Z (down) to move their paddle
+2. Player 1 (left side) uses `A` (up) and `Z` (down) to move their paddle
 
-3. Player 2 (right side) uses K (up) and M (down) to move their paddle
+3. Player 2 (right side) uses `K` (up) and `M` (down) to move their paddle
 
-4. Press Space Bar to advance each turn
+4. Score points when the ball passes your opponent's paddle
 
-5. The ball will move after each turn - try to hit it with your paddle
-
-6. Score points when the ball passes your opponent's paddle
-
-7. First player to reach 21 points wins!
+5. First player to reach 21 points wins!
 
 ## 🔧 Game Mechanics
 * Wall Collision: Ball bounces off the top and bottom walls
