@@ -12,10 +12,15 @@ The repository is organized into two main areas:
 pet-projects
 │
 ├── C
+│   ├── caesar
 │   ├── divisor
+│   ├── filter
+│   ├── matrix
+│   ├── pong-live
 │   ├── pong
-│   ├── cipher
-│   └── runoff
+│   ├── runoff
+│   ├── substitution
+│   └── volume
 │
 └── SQL
     ├── abc_analysis
