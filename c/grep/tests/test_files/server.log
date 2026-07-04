@@ -1,0 +1,15 @@
+[INFO] Server started
+
+[INFO] Listening on port 8080
+
+[WARNING] High memory usage
+
+[INFO] User login: alice
+
+[ERROR] Database connection failed
+
+[INFO] Retrying connection
+
+[ERROR] Timeout occurred
+
+[INFO] Connection restored

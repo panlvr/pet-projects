@@ -1,0 +1,24 @@
+First line
+
+Third line after one blank.
+
+Sixth line after two blanks.
+
+apple
+
+Apple
+
+APPLE
+
+banana
+
+Banana
+
+12345
+
+abc123
+
+special_characters !@#$%^&*()
+
+	tab at the beginning
+tab	at	the	middle
